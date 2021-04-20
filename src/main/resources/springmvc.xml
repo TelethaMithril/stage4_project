@@ -25,12 +25,13 @@
     <mvc:default-servlet-handler></mvc:default-servlet-handler>
 
     <!--权限拦截器-->
-    <!--<mvc:interceptors>
+    <mvc:interceptors>
         <mvc:interceptor>
-            &lt;!&ndash;Ant风格&ndash;&gt;
-            <mvc:mapping path="/**/*.do"/>
-            <bean class="com.sy.interceptor.SessionInterceptor"></bean>
+            <mvc:mapping path="/user/*.do"/>
+            <mvc:exclude-mapping path="/user/login.do"></mvc:exclude-mapping>
+            <bean class="com.sy.interceptor.PermsInterceptor"></bean>
         </mvc:interceptor>
-    </mvc:interceptors>-->
+    </mvc:interceptors>
+
 
 </beans>
