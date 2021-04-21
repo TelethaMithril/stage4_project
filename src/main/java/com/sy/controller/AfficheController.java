@@ -16,7 +16,7 @@ public class AfficheController {
     @Autowired
     private AfficheService afficheService;
 
-    //ok
+    //testOk
     @RequestMapping("/add.do")
     public Result add(Affiche affiche, Result result) throws Exception {
         int i = afficheService.add(affiche);
@@ -25,7 +25,7 @@ public class AfficheController {
         }
         return result;
     }
-    //ok
+    //testOk
     @RequestMapping("/remove.do")
     public Result remove(Integer id, Result result) throws Exception {
         int i = afficheService.removeById(id);
@@ -34,7 +34,7 @@ public class AfficheController {
         }
         return result;
     }
-    //ok
+    //testOk
     @RequestMapping("/modify.do")
     public Result modify(Affiche affiche, Result result) throws Exception {
         int i = afficheService.modifyById(affiche);
@@ -43,7 +43,7 @@ public class AfficheController {
         }
         return result;
     }
-    //ok
+    //testOk
     @RequestMapping("/list.do")
     public Result list(Affiche affiche,
                        @RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
@@ -53,7 +53,7 @@ public class AfficheController {
         result.setPageInfo(page);
         return result;
     }
-    //ok
+    //testOk
     @RequestMapping("findById")
     public Result findById(Integer id,Result result) throws Exception {
         Affiche byId = afficheService.findById(id);
