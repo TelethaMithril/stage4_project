@@ -11,4 +11,8 @@ public interface UserService {
     int modify(User user) throws Exception;
 
     PageInfo findAll(User user, int pageNum, int pageSize) throws Exception;
+
+    int add(User user)throws Exception;
+
+    int remove(int id)throws Exception;
 }

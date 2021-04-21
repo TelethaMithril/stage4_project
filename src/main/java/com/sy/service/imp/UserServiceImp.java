@@ -37,5 +37,17 @@ public class UserServiceImp implements UserService {
         return pageInfo;
     }
 
+    @Transactional
+    @Override
+    public int add(User user) throws Exception {
+        return mapper.add(user);
+    }
+
+    @Transactional
+    @Override
+    public int remove(int id) throws Exception {
+        return mapper.delete(id);
+    }
+
 
 }
