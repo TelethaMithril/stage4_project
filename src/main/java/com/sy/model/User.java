@@ -6,8 +6,27 @@ public class User {
     private String password;
     private String realName;
     private String mobile;
+    private String bankAccount;
     private Integer roleId;
+    private String roleName;
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
     private Integer referId;
+
+    public String getBankAccount() {
+        return bankAccount;
+    }
+
+    public void setBankAccount(String bankAccount) {
+        this.bankAccount = bankAccount;
+    }
 
 
     public Integer getId() {
